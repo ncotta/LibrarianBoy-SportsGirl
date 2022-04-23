@@ -14,12 +14,14 @@ public class Player1Controller : MonoBehaviour
     public float rotationSpeed = 0.5f;
     public float jumpThrust = 15f;
     private bool isGrounded;
+    private int pickupCount;
 
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        pickupCount = 0;
     }
 
     void Update()
@@ -57,6 +59,14 @@ public class Player1Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            other.gameObject.SetActive(false);
+            pickupCount++;
         }
     }
 }

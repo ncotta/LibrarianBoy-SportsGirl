@@ -8,6 +8,7 @@ public class Player2Controller : MonoBehaviour
     public float rotationSpeed = 0.5f;
     public float jumpThrust = 15f;
     private bool isGrounded;
+    private int pickupCount;
 
     private Rigidbody rb;
 
@@ -49,6 +50,14 @@ public class Player2Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            other.gameObject.SetActive(false);
+            pickupCount++;
         }
     }
 }
