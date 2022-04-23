@@ -1,7 +1,7 @@
 /*
  * Author(s): Niklaas Cotta
  * Last updated: 04/22/22
- * Controller for Player 1 game object.
+ * Controller for Player 1 game object
  */
 
 using System.Collections;
@@ -10,23 +10,53 @@ using UnityEngine;
 
 public class Player1Controller : MonoBehaviour
 {
-    public CharacterController characterController;
-
     public float speed = 5.0f;
+    public float rotationSpeed = 0.5f;
+    public float jumpThrust = 15f;
+    private bool isGrounded;
 
-    private Vector3 direction;
-    private float horizontal;
-    private float vertical;
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-        direction = new Vector3(horizontal, 0f, vertical).normalized;
-
-        if (direction.magnitude >= 0.1f)
+        if (Input.GetKey(KeyCode.W))
         {
-            characterController.Move(direction * speed * Time.deltaTime);
+            this.transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            this.transform.Translate(Vector3.back * Time.deltaTime * speed);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            this.transform.Rotate(Vector3.up, -10 * rotationSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.transform.Rotate(Vector3.up, 10 * rotationSpeed);
+        }
+
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpThrust, ForceMode.Impulse);
+            isGrounded = false;
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
         }
     }
 }
