@@ -346,9 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 0.5
-  jumpThrust: 2
-  isGrounded: 0
-  rb: {fileID: 242122869}
+  jumpThrust: 5
 --- !u!65 &242122867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1005,8 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotationSpeed: 0.5
-  jumpThrust: 3
-  rb: {fileID: 0}
+  jumpThrust: 8
 --- !u!65 &1725255831
 BoxCollider:
   m_ObjectHideFlags: 0
