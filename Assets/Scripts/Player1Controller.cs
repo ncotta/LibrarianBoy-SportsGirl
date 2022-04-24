@@ -18,10 +18,20 @@ public class Player1Controller : MonoBehaviour
 
     private Rigidbody rb;
 
+    public bool redKey = false;
+    public bool blueKey = false;
+    public bool greenKey = false;
+
+    private bool interacting = false;
+    private GameObject[] interactables;
+    GameObject closest;
+    float closestDist = 100f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         pickupCount = 0;
+        interactables = GameObject.FindGameObjectsWithTag("Interactable");
     }
 
     void Update()
@@ -52,8 +62,34 @@ public class Player1Controller : MonoBehaviour
             isGrounded = false;
         }
 
+        if (Input.GetKey(KeyCode.E) && !interacting)
+        {   
+            interacting = true;
+
+            foreach(GameObject interactable in interactables){
+                float dist = Vector3.Distance(interactable.transform.position, gameObject.transform.position);
+                if (dist < closestDist){
+                    closest = interactable;
+                    closestDist = dist;
+                }
+            }
+            Debug.Log(closestDist);
+            // if (closestDist < 8.0f){
+            //     closest.Action();
+            // }
+            StartCoroutine(Interact());
+        }
+
     }
 
+    IEnumerator Interact(){
+        
+        
+        yield return new WaitForSeconds(0.5f);;
+        interacting = false;
+        Debug.Log("set it  to false");
+
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))

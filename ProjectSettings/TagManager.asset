@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Pickup
+  - Librarian
+  - SportsGirl
+  - Interactable
   layers:
   - Default
   - TransparentFX
