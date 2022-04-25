@@ -26,6 +26,7 @@ public class Player1Controller : MonoBehaviour
     private GameObject[] interactables;
     GameObject closest;
     float closestDist = 100f;
+    string objectName;
 
     private void Start()
     {
@@ -73,10 +74,14 @@ public class Player1Controller : MonoBehaviour
                     closestDist = dist;
                 }
             }
-            Debug.Log(closestDist);
-            // if (closestDist < 8.0f){
-            //     closest.Action();
-            // }
+            Debug.Log(closest);
+            if (closestDist < 8.0f){
+                if (closest.name == "Lever"){
+                    Debug.Log("Interacting with lever");
+                    closest.GetComponent<LeverScript>().Interact();
+                }
+                
+            }
             StartCoroutine(Interact());
         }
 

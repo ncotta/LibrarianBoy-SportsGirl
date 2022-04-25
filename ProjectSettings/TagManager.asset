@@ -9,6 +9,7 @@ TagManager:
   - Librarian
   - SportsGirl
   - Interactable
+  - Door
   layers:
   - Default
   - TransparentFX

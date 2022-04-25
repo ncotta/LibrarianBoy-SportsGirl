@@ -87,6 +87,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -113,6 +114,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8547448563377378517
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,10 +127,10 @@ GameObject:
   - component: {fileID: 6744138384960208247}
   - component: {fileID: 5240167562397193625}
   - component: {fileID: 5809220570440302440}
-  - component: {fileID: 5809220570440302438}
+  - component: {fileID: 1546797533529339164}
   m_Layer: 0
   m_Name: Lever
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,6 +172,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -196,6 +199,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &5809220570440302440
 Animator:
   serializedVersion: 3
@@ -215,7 +219,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5809220570440302438
+--- !u!114 &1546797533529339164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,12 +228,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8547448563377378517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 354a378e82f9d224d8c66706ecf4f493, type: 3}
+  m_Script: {fileID: 11500000, guid: e9f5ef646ec570c42a8c4fbed653b927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isValsve: 0
-  ValveSpeed: 1
-  isLever: 1
+  isValve: 0
+  ValveSpeed: 10
+  isLever: 0
   Locked: 0
   DoorObject: {fileID: 0}
   RampObject: {fileID: 0}
@@ -241,4 +245,4 @@ MonoBehaviour:
   max: 90
   min: 0
   speed: 5
-  valveBool: 1
+  connectedElementName: 
