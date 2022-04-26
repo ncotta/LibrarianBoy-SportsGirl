@@ -10,6 +10,7 @@ TagManager:
   - SportsGirl
   - Interactable
   - Door
+  - Ending
   layers:
   - Default
   - TransparentFX

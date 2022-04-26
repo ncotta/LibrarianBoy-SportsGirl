@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player1Controller : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Player1Controller : MonoBehaviour
     private int pickupCount;
 
     private Rigidbody rb;
+    public TextMeshProUGUI gameOverText;
 
     public bool redKey = false;
     public bool blueKey = false;
@@ -109,5 +111,15 @@ public class Player1Controller : MonoBehaviour
             other.gameObject.SetActive(false);
             pickupCount++;
         }
+
+        if (other.gameObject.CompareTag("Exit"))
+        {
+            EndLevel();
+        }
+    }
+    private void EndLevel()
+    {
+        gameOverText.enabled = true;
+        Application.Quit();
     }
 }

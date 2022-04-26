@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player2Controller : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class Player2Controller : MonoBehaviour
     public float jumpThrust = 15f;
     private bool isGrounded;
     private int pickupCount;
+    public TextMeshProUGUI gameOverText;
 
     private Rigidbody rb;
+
 
     private void Start()
     {
@@ -51,7 +54,9 @@ public class Player2Controller : MonoBehaviour
         {
             isGrounded = true;
         }
+
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Pickup"))
@@ -59,5 +64,15 @@ public class Player2Controller : MonoBehaviour
             other.gameObject.SetActive(false);
             pickupCount++;
         }
+    
+    if (other.gameObject.CompareTag("Exit"))
+        {
+            EndLevel();
+        }
+    }
+    private void EndLevel()
+    {
+        gameOverText.enabled = true;
+        Application.Quit();
     }
 }
