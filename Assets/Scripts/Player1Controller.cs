@@ -112,7 +112,7 @@ public class Player1Controller : MonoBehaviour
             pickupCount++;
         }
 
-        if (other.gameObject.CompareTag("Exit"))
+        if (other.gameObject.CompareTag("Ending"))
         {
             EndLevel();
         }
