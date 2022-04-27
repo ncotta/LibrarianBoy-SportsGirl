@@ -9,26 +9,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Player1Controller : MonoBehaviour
+public class Player1Controller : PlayerClass
 {
-    public float speed = 5.0f;
-    public float rotationSpeed = 0.5f;
-    public float jumpThrust = 15f;
-    private bool isGrounded;
-    private int pickupCount;
 
-    private Rigidbody rb;
-    public TextMeshProUGUI gameOverText;
-
-    public bool redKey = false;
-    public bool blueKey = false;
-    public bool greenKey = false;
-
-    private bool interacting = false;
-    private GameObject[] interactables;
-    GameObject closest;
-    float closestDist = 100f;
-    string objectName;
+    
 
     private void Start()
     {
@@ -68,58 +52,13 @@ public class Player1Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && !interacting)
         {   
             interacting = true;
+            Interact();
 
-            foreach(GameObject interactable in interactables){
-                float dist = Vector3.Distance(interactable.transform.position, gameObject.transform.position);
-                if (dist < closestDist){
-                    closest = interactable;
-                    closestDist = dist;
-                }
-            }
-            Debug.Log(closest);
-            if (closestDist < 8.0f){
-                if (closest.name == "Lever"){
-                    Debug.Log("Interacting with lever");
-                    closest.GetComponent<LeverScript>().Interact();
-                }
-                
-            }
-            StartCoroutine(Interact());
+            StartCoroutine(InteractDelay());
         }
 
     }
 
-    IEnumerator Interact(){
-        
-        
-        yield return new WaitForSeconds(0.5f);;
-        interacting = false;
-        Debug.Log("set it  to false");
 
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pickup"))
-        {
-            other.gameObject.SetActive(false);
-            pickupCount++;
-        }
 
-        if (other.gameObject.CompareTag("Ending"))
-        {
-            EndLevel();
-        }
-    }
-    private void EndLevel()
-    {
-        gameOverText.enabled = true;
-        Application.Quit();
-    }
 }

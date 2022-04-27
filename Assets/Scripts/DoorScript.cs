@@ -100,32 +100,36 @@ public class DoorScript : MonoBehaviour
     public void Interact(){
             if (isOpened && CanClose && !RedLocked && !BlueLocked)
             {
-                isOpened = false;
+                rbDoor.AddRelativeTorque(new Vector3(-2000f, -2000f, -2000f));
+                isOpened= false; 
+                hingeLim.max = 0f;
+                hingeLim.min = 0f;
+                hinge.limits = hingeLim;
             }
             else if (!isOpened && CanOpen && !RedLocked && !BlueLocked)
             {
                 isOpened = true;
+                hingeLim.max = 90f;
+                hingeLim.min = 0f;
+                hinge.limits = hingeLim;
                 Debug.Log("opened");
                 rbDoor.AddRelativeTorque(new Vector3(200f, 200f, 200f)); 
             }
     }
 
-    private void FixedUpdate() // door is physical object
-    {
-        if (isOpened)
-        {
-            currentLim = 85f;
-        }
-        else
-        {
-            // currentLim = hinge.angle; // door will closed from current opened angle
-            if (currentLim > 1f)
-                currentLim -= .5f * OpenSpeed;
-        }
+    // private void FixedUpdate() // door is physical object
+    // {
+    //     if (!isOpened)
 
-        // using values to door object
-        hingeLim.max = currentLim;
-        hingeLim.min = -currentLim;
-        hinge.limits = hingeLim;
-    }
+    //     {
+    //         // currentLim = hinge.angle; // door will closed from current opened angle
+    //         if (currentLim > 1f)
+    //             currentLim -= .5f * OpenSpeed;
+    //     }
+
+    //     // using values to door object
+    //     hingeLim.max = currentLim;
+    //     hingeLim.min = -currentLim;
+    //     hinge.limits = hingeLim;
+    // }
 }
