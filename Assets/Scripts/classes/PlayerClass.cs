@@ -66,7 +66,7 @@ public class PlayerClass : MonoBehaviour
 
     protected void EndLevel()
     {
-        gameOverText.enabled = true;
+        //gameOverText.enabled = true;
         Application.Quit();
     }
 

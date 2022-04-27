@@ -11,9 +11,6 @@ using TMPro;
 
 public class Player1Controller : PlayerClass
 {
-
-    
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

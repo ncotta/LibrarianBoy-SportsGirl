@@ -12,7 +12,7 @@ public class GameEnding : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       if (other.gameObject.CompareTag("SportsGirl") || other.gameObject.CompareTag("Librarian"))
+       if (other.gameObject.CompareTag("Ending"))
        {
             EndLevel();
        }
@@ -21,7 +21,7 @@ public class GameEnding : MonoBehaviour
     private void EndLevel()
     {
         gameOverText.enabled = true;
-        Application.Quit();
+        // Application.Quit();
     }
 
     // Update is called once per frame
