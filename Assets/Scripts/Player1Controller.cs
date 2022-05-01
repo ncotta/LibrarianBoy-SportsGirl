@@ -22,22 +22,42 @@ public class Player1Controller : PlayerClass
     {
         if (Input.GetKey(KeyCode.W))
         {
-            this.transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            this.transform.Translate(Vector3.forward.normalized * Time.deltaTime * speed, Space.World);
+            if (Vector3.forward.normalized != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(Vector3.forward.normalized, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
+            }
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            this.transform.Translate(Vector3.back * Time.deltaTime * speed);
+            this.transform.Translate(Vector3.back.normalized * Time.deltaTime * speed, Space.World);
+            if (Vector3.back.normalized != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(Vector3.back.normalized, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
+            }
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            this.transform.Rotate(Vector3.up, -10 * rotationSpeed);
+            this.transform.Translate(Vector3.left.normalized * Time.deltaTime * speed, Space.World);
+            if (Vector3.left.normalized != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(Vector3.left.normalized, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
+            }
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            this.transform.Rotate(Vector3.up, 10 * rotationSpeed);
+            this.transform.Translate(Vector3.right.normalized * Time.deltaTime * speed, Space.World);
+            if (Vector3.right.normalized != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(Vector3.right.normalized, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
+            }
         }
 
         if (Input.GetKey(KeyCode.Space) && isGrounded)
