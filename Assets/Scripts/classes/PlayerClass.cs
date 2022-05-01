@@ -7,8 +7,11 @@ public class PlayerClass : MonoBehaviour
     public float speed = 5.0f;
     public float rotationSpeed = 0.5f;
     public float jumpThrust = 15f;
+
+    protected bool isTurning = false;
     protected bool isGrounded;
     protected int pickupCount;
+    protected Vector3 r = new Vector3(0f,0f,0f);
 
     protected Rigidbody rb;
     public TextMeshProUGUI gameOverText;
