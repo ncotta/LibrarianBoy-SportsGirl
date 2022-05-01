@@ -723,7 +723,7 @@ MonoBehaviour:
   speed: 8.5
   rotationSpeed: 5
   jumpThrust: 10
-  gameOverText: {fileID: 0}
+  gameOverText: {fileID: 318064650}
   redKey: 0
   blueKey: 0
   greenKey: 0
@@ -3028,9 +3028,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12.5
-  rotationSpeed: 0.4
+  rotationSpeed: 5
   jumpThrust: 15
-  gameOverText: {fileID: 0}
+  gameOverText: {fileID: 318064650}
   redKey: 0
   blueKey: 0
   greenKey: 0
