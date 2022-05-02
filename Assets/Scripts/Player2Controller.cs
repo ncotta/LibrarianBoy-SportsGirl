@@ -104,7 +104,7 @@ public class Player2Controller : PlayerClass
                 r.x = r.y = r.z = 0f;
         }
 
-        if (Input.GetKey(KeyCode.RightControl) && isGrounded)
+        if (Input.GetKey(KeyCode.Slash) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpThrust, ForceMode.Impulse);
             isGrounded = false;
