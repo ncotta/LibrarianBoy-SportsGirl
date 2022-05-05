@@ -40,37 +40,16 @@ public class PlayerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     protected void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Obstacle"))
         {
             isGrounded = true;
         }
 
-    }
-
-    protected void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pickup"))
-        {
-            other.gameObject.SetActive(false);
-            pickupCount++;
-        }
-    
-        if (other.gameObject.CompareTag("Ending"))
-        {
-            EndLevel();
-        }
-    }
-
-
-    protected void EndLevel()
-    {
-        //gameOverText.enabled = true;
-        Application.Quit();
     }
 
     public IEnumerator InteractDelay(){

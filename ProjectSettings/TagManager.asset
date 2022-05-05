@@ -5,13 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Pickup
   - Librarian
   - SportsGirl
   - Interactable
   - Door
   - Ending
   - PressurePlate
+  - RedPickup
+  - BluePickup
+  - Obstacle
+  - RedZone
+  - BlueZone
   layers:
   - Default
   - TransparentFX
