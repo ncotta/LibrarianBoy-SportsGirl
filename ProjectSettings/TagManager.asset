@@ -16,6 +16,7 @@ TagManager:
   - Obstacle
   - RedZone
   - BlueZone
+  - pushableBox
   layers:
   - Default
   - TransparentFX
