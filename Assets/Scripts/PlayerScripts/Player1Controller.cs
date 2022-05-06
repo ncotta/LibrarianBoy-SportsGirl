@@ -11,8 +11,7 @@ using TMPro;
 
 public class Player1Controller : PlayerClass
 {
-    public float forceMagnitude;
-    public bool boxCollide = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,24 +30,6 @@ public class Player1Controller : PlayerClass
         if (other.gameObject.CompareTag("Ending"))
         {
             EndLevel();
-        }
-    }
-
-    protected void OnControllerColliderHit(ControllerColliderHit other)
-    {
-        if (other.gameObject.CompareTag("pushableBox"))
-        {
-            Rigidbody rb2 = other.collider.attachedRigidbody;
-            boxCollide = true;
-
-            if (rb2 != null)
-            {
-                Vector3 forceDirection = other.gameObject.transform.position - transform.position;
-                forceDirection.y = 0;
-                forceDirection.Normalize();
-
-                rb.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
-            }
         }
     }
 
