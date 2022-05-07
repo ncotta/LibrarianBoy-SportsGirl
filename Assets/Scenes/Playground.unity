@@ -530,6 +530,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3080565441257105360, guid: ec98c23f1c4790745bbb9b9fbb3811b2, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080565441257105360, guid: ec98c23f1c4790745bbb9b9fbb3811b2, type: 3}
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
@@ -583,11 +587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3080565441257105367, guid: ec98c23f1c4790745bbb9b9fbb3811b2, type: 3}
       propertyPath: speed
-      value: 10.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3080565441257105367, guid: ec98c23f1c4790745bbb9b9fbb3811b2, type: 3}
       propertyPath: jumpThrust
-      value: 85
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3080565441257105367, guid: ec98c23f1c4790745bbb9b9fbb3811b2, type: 3}
       propertyPath: forceMagnitude

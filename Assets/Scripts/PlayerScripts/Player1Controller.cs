@@ -43,7 +43,8 @@ public class Player1Controller : PlayerClass
     {
         if (Input.GetKey(KeyCode.W))
         {
-            this.transform.Translate(Vector3.forward.normalized * Time.deltaTime * speed, Space.World);
+            rb.AddForce(Vector3.forward.normalized * Time.deltaTime * speed * 100.0f, ForceMode.Impulse);
+            //this.transform.Translate(Vector3.forward.normalized * Time.deltaTime * speed, Space.World);
             if (r.x == 1f){
                 r.x = 0.5f;
                 r.z = 0.5f;
@@ -64,7 +65,8 @@ public class Player1Controller : PlayerClass
 
         if (Input.GetKey(KeyCode.S))
         {
-            this.transform.Translate(Vector3.back.normalized * Time.deltaTime * speed, Space.World);
+            rb.AddForce(Vector3.back.normalized * Time.deltaTime * speed * 100.0f, ForceMode.Impulse);
+            //this.transform.Translate(Vector3.back.normalized * Time.deltaTime * speed, Space.World);
             if (r.x == 1f){
                 r.x = 0.5f;
                 r.z = -0.5f;
@@ -85,7 +87,8 @@ public class Player1Controller : PlayerClass
 
         if (Input.GetKey(KeyCode.A))
         {
-            this.transform.Translate(Vector3.left.normalized * Time.deltaTime * speed, Space.World);
+            rb.AddForce(Vector3.left.normalized * Time.deltaTime * speed * 100.0f, ForceMode.Impulse);
+            //this.transform.Translate(Vector3.left.normalized * Time.deltaTime * speed, Space.World);
             // if (Vector3.left.normalized != Vector3.zero)
             // {
             //     Quaternion toRotation = Quaternion.LookRotation(Vector3.left.normalized, Vector3.up);
@@ -106,7 +109,8 @@ public class Player1Controller : PlayerClass
 
         if (Input.GetKey(KeyCode.D))
         {
-            this.transform.Translate(Vector3.right.normalized * Time.deltaTime * speed, Space.World);
+            rb.AddForce(Vector3.right.normalized * Time.deltaTime * speed * 100.0f, ForceMode.Impulse);
+            //this.transform.Translate(Vector3.right.normalized * Time.deltaTime * speed, Space.World);
             // if (Vector3.right.normalized != Vector3.zero)
             // {
             //     Quaternion toRotation = Quaternion.LookRotation(Vector3.right.normalized, Vector3.up);
