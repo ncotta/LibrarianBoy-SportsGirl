@@ -7,6 +7,7 @@ public class PlayerClass : MonoBehaviour
     public float speed = 5.0f;
     public float rotationSpeed = 0.5f;
     public float jumpThrust = 15f;
+    protected bool stopMovementFriction = true;
 
     protected bool isTurning = false;
     protected bool isGrounded;

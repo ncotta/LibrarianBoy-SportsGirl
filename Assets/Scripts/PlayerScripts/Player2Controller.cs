@@ -36,7 +36,9 @@ public class Player2Controller : PlayerClass
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            this.transform.Translate(Vector3.forward.normalized * Time.deltaTime * speed, Space.World);
+            // this.transform.Translate(Vector3.forward.normalized * Time.deltaTime * speed, Space.World);
+            stopMovementFriction = false;
+
             if (r.x == 1f)
             {
                 r.x = 0.5f;
@@ -60,7 +62,8 @@ public class Player2Controller : PlayerClass
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            this.transform.Translate(Vector3.back.normalized * Time.deltaTime * speed, Space.World);
+            // this.transform.Translate(Vector3.back.normalized * Time.deltaTime * speed, Space.World);
+            stopMovementFriction = false;
             if (r.x == 1f)
             {
                 r.x = 0.5f;
@@ -84,12 +87,13 @@ public class Player2Controller : PlayerClass
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            this.transform.Translate(Vector3.left.normalized * Time.deltaTime * speed, Space.World);
+            // this.transform.Translate(Vector3.left.normalized * Time.deltaTime * speed, Space.World);
             // if (Vector3.left.normalized != Vector3.zero)
             // {
             //     Quaternion toRotation = Quaternion.LookRotation(Vector3.left.normalized, Vector3.up);
             //     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
             // }
+            stopMovementFriction = false;
             if (r.z == 1f)
             {
                 r.x = -0.5f;
@@ -108,12 +112,13 @@ public class Player2Controller : PlayerClass
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            this.transform.Translate(Vector3.right.normalized * Time.deltaTime * speed, Space.World);
+            // this.transform.Translate(Vector3.right.normalized * Time.deltaTime * speed, Space.World);
             // if (Vector3.right.normalized != Vector3.zero)
             // {
             //     Quaternion toRotation = Quaternion.LookRotation(Vector3.right.normalized, Vector3.up);
             //     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
             // }
+            stopMovementFriction = false;
             if (r.z == 1f)
             {
                 r.x = 0.5f;
@@ -130,11 +135,18 @@ public class Player2Controller : PlayerClass
             }
         }
 
-        if (r.normalized != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(r.normalized, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
+        if (r.normalized != Vector3.zero){
+                Quaternion toRotation = Quaternion.LookRotation(r.normalized, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
+                if(isGrounded){
+                    rb.velocity = r * 20f;
+                }
+                else{
+                    rb.velocity = new Vector3(r.x*10f, rb.velocity.y, r.z*10f);
+                }
             r.x = r.y = r.z = 0f;
+        }else if (isGrounded){
+            rb.velocity = r;
         }
 
         if (Input.GetKey(KeyCode.Slash) && isGrounded)
