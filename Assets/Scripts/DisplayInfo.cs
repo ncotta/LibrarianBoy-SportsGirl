@@ -16,6 +16,7 @@ public class DisplayInfo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("SportsGirl") || collision.gameObject.CompareTag("Librarian"))
         {
+            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             instructions.gameObject.SetActive(true);
         }
     }

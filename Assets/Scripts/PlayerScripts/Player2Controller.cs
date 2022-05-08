@@ -139,7 +139,7 @@ public class Player2Controller : PlayerClass
                 Quaternion toRotation = Quaternion.LookRotation(r.normalized, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
                 if(isGrounded){
-                    rb.velocity = r * 20f;
+                    rb.velocity = r * 15f;
                 }
                 else{
                     rb.velocity = new Vector3(r.x*10f, rb.velocity.y, r.z*10f);
