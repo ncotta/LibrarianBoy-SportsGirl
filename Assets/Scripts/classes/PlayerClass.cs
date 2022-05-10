@@ -59,7 +59,9 @@ public class PlayerClass : MonoBehaviour
 
     protected void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Ground") 
+        || collision.gameObject.CompareTag("Obstacle") 
+        || collision.gameObject.CompareTag("PressurePlate"))
         {
             isGrounded = true;
         }

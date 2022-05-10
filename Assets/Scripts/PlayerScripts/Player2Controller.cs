@@ -34,19 +34,17 @@ public class Player2Controller : PlayerClass
             // this.transform.Translate(Vector3.forward.normalized * Time.deltaTime * speed, Space.World);
             stopMovementFriction = false;
 
-            if (r.x == 1f)
-            {
-                r.x = 0.5f;
-                r.z = 0.5f;
+            if (r.x == -0.5f && r.z == -0.5f){
+                r.x = -1f;
+                r.z = 0f;
             }
-            else if (r.x == -1f)
-            {
-                r.x = -0.5f;
-                r.z = 0.5f;
-            }
-            else
-            {
+            else if (r.x == 0.5f && r.z == 0.5f){
+                r.x = 0f;
                 r.z = 1f;
+            }
+            else{
+                r.z = 0.5f;
+                r.x = -0.5f;
             }
             // if (Vector3.forward.normalized != Vector3.zero)
             // {
@@ -59,19 +57,17 @@ public class Player2Controller : PlayerClass
         {
             // this.transform.Translate(Vector3.back.normalized * Time.deltaTime * speed, Space.World);
             stopMovementFriction = false;
-            if (r.x == 1f)
-            {
-                r.x = 0.5f;
-                r.z = -0.5f;
-            }
-            else if (r.x == -1f)
-            {
-                r.x = -0.5f;
-                r.z = -0.5f;
-            }
-            else
-            {
+            if (r.x == -0.5f && r.z == -0.5f){
+                r.x = 0f;
                 r.z = -1f;
+            }
+            else if (r.x == 0.5f && r.z == 0.5f){
+                r.x = 1f;
+                r.z = 0f;
+            }
+            else{
+                r.z = -0.5f;
+                r.x = 0.5f;
             }
             // if (Vector3.back.normalized != Vector3.zero)
             // {
@@ -89,19 +85,17 @@ public class Player2Controller : PlayerClass
             //     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
             // }
             stopMovementFriction = false;
-            if (r.z == 1f)
-            {
-                r.x = -0.5f;
-                r.z = 0.5f;
-            }
-            else if (r.z == -1f)
-            {
-                r.x = -0.5f;
-                r.z = -0.5f;
-            }
-            else
-            {
+            if (r.x == -0.5f && r.z == 0.5f){
                 r.x = -1f;
+                r.z = 0f;
+            }
+            else if (r.x == 0.5f && r.z == -0.5f){
+                r.x = 0f;
+                r.z = -1f;
+            }
+            else{
+                r.z = -0.5f;
+                r.x = -0.5f;
             }
         }
 
@@ -114,19 +108,17 @@ public class Player2Controller : PlayerClass
             //     transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
             // }
             stopMovementFriction = false;
-            if (r.z == 1f)
-            {
-                r.x = 0.5f;
-                r.z = 0.5f;
+            if (r.x == -0.5f && r.z == 0.5f){
+                r.x = 0f;
+                r.z = 1f;
             }
-            else if (r.z == -1f)
-            {
-                r.x = 0.5f;
-                r.z = -0.5f;
-            }
-            else
-            {
+            else if (r.x == 0.5f && r.z == -0.5f){
                 r.x = 1f;
+                r.z = 0f;
+            }
+            else{
+                r.z = 0.5f;
+                r.x = 0.5f;
             }
         }
 
