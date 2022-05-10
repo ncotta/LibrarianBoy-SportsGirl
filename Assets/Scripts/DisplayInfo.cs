@@ -5,7 +5,8 @@ using TMPro;
 
 public class DisplayInfo : MonoBehaviour
 {
-    public RectTransform instructions;
+    public GameObject instructions;
+    public bool displaying = false;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class DisplayInfo : MonoBehaviour
         {
             Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             instructions.gameObject.SetActive(true);
+            displaying = true;
         }
     }
 
@@ -26,6 +28,7 @@ public class DisplayInfo : MonoBehaviour
         if (collision.gameObject.CompareTag("SportsGirl") || collision.gameObject.CompareTag("Librarian"))
         {
             instructions.gameObject.SetActive(false);
+            displaying = false;
         }
     }
 

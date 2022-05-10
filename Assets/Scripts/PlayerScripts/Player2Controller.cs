@@ -27,11 +27,6 @@ public class Player2Controller : PlayerClass
         }
     }
 
-    protected void EndLevel()
-    {
-        //gameOverText.enabled = true;
-        Application.Quit();
-    }
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))

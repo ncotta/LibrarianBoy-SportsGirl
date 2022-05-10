@@ -11,7 +11,6 @@ using TMPro;
 
 public class Player1Controller : PlayerClass
 {
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,14 +30,6 @@ public class Player1Controller : PlayerClass
         {
             EndLevel();
         }
-    }
-
-
-
-    protected void EndLevel()
-    {
-        //gameOverText.enabled = true;
-        Application.Quit();
     }
 
     void Update()

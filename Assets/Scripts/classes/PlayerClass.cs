@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class PlayerClass : MonoBehaviour
 {
     public float speed = 5.0f;
@@ -14,8 +15,9 @@ public class PlayerClass : MonoBehaviour
     protected int pickupCount;
     protected Vector3 r = new Vector3(0f,0f,0f);
 
+    public GameObject gameOverScreen;
+
     protected Rigidbody rb;
-    public TextMeshProUGUI gameOverText;
 
     public bool redKey = false;
     public bool blueKey = false;
@@ -35,7 +37,18 @@ public class PlayerClass : MonoBehaviour
 
     void Start()
     {
-        
+        gameOverScreen.SetActive(false);
+    }
+    protected void EndLevel()
+    {
+        gameOverScreen.SetActive(true);
+        StartCoroutine("QuitGame");
+    }
+
+    IEnumerator QuitGame()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 
     // Update is called once per frame
