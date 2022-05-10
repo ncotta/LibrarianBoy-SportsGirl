@@ -10,9 +10,16 @@ public class CameraScript : MonoBehaviour
     
 void Update()
     {
-        distance = Vector3.Dot(player1.transform.position-player2.transform.position, player1.transform.position-player2.transform.position);
+        distance = Mathf.Sqrt(Vector3.Dot(player1.transform.position-player2.transform.position, player1.transform.position-player2.transform.position));
         Debug.Log(distance);
         transform.position = (player1.transform.position + player2.transform.position)/2
-         + new Vector3(0, 25 + distance/100 , -15 - distance/100);
+         + new Vector3(15+distance/10, 25 + distance/5 , -15 - distance/10);
     }
 }
+/*
+        distance = Vector3.Dot(player1.transform.position-player2.transform.position, player1.transform.position-player2.transform.position);
+        Debug.Log(distance);
+        distance = Mathf.Sqrt(distance);
+        newPos = Vector3.Lerp(player1.transform.position, player2.transform.position, 0.5f);
+        transform.position = newPos + new Vector3((distance)*5, 20+distance, -(distance)*5);
+*/

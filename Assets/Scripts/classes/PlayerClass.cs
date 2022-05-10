@@ -53,6 +53,16 @@ public class PlayerClass : MonoBehaviour
 
     }
 
+    protected void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
+
+
+    }
+
     public IEnumerator InteractDelay(){
         
         yield return new WaitForSeconds(0.5f);;
@@ -69,7 +79,7 @@ public class PlayerClass : MonoBehaviour
                 closestDist = dist;
             }
         }
-        Debug.Log(closest);
+        // Debug.Log(closest);
         if (closestDist < 8.0f){
             if (closest.name == "Lever"){
                 Debug.Log("Interacting with lever");

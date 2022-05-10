@@ -98,6 +98,7 @@ public class DoorScript : MonoBehaviour
     }
 
     public void Interact(){
+
             if (isOpened && CanClose && !RedLocked && !BlueLocked)
             {
                 rbDoor.AddRelativeTorque(new Vector3(-2000f, -2000f, -2000f));
@@ -110,7 +111,7 @@ public class DoorScript : MonoBehaviour
             {
                 isOpened = true;
                 hingeLim.max = 90f;
-                hingeLim.min = 0f;
+                hingeLim.min = -90f;
                 hinge.limits = hingeLim;
                 Debug.Log("opened");
                 rbDoor.AddRelativeTorque(new Vector3(200f, 200f, 200f)); 
