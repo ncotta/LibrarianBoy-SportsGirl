@@ -13,7 +13,7 @@ ModelImporter:
       name: Robot
     second: {fileID: 2100000, guid: 0aa851515cd3747d6b3b3e461199a2ed, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 1
     materialSearch: 1
     materialLocation: 1
