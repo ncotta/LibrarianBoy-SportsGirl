@@ -16,12 +16,14 @@ public class PlayerClass : MonoBehaviour
     protected Vector3 r = new Vector3(0f,0f,0f);
 
     public GameObject gameOverScreen;
+    public GameObject gameDeathScreen;
 
     protected Rigidbody rb;
 
     public bool redKey = false;
     public bool blueKey = false;
     public bool greenKey = false;
+    public bool dead = false;
 
     protected bool interacting = false;
     protected GameObject[] interactables;
@@ -38,23 +40,34 @@ public class PlayerClass : MonoBehaviour
     void Start()
     {
         gameOverScreen.SetActive(false);
+        gameDeathScreen.SetActive(false);
     }
     protected void EndLevel()
     {
         gameOverScreen.SetActive(true);
-        StartCoroutine("QuitGame");
+        StartCoroutine(QuitGame());
+    }
+
+    protected void EndLevel2()
+    {
+        gameDeathScreen.SetActive(true);
+        StartCoroutine(QuitGame());
     }
 
     IEnumerator QuitGame()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Scenes/MainMenu");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        /*if (transform.position.y < -20)
+        {
+            dead = true;
+            EndLevel();
+        }*/
     }
 
     protected void OnCollisionEnter(Collision collision)

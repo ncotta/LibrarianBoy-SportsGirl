@@ -30,6 +30,11 @@ public class Player1Controller : PlayerClass
         {
             EndLevel();
         }
+
+        if (other.gameObject.CompareTag("Death"))
+        {
+            EndLevel2();
+        }
     }
 
     void Update()

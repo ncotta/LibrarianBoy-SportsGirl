@@ -1,44 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitLadderScript : MonoBehaviour
 {
-    private bool player1Fin = false;
-    private bool player2Fin = false;
-    private bool finished = false;
+    public bool player1Fin = false;
+    public bool player2Fin = false;
+    public bool finished = false;
+    public GameObject wintext;
 
-    protected void OnCollisionEnter(Collision collision)
+    protected void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == "Player 1" && !player1Fin){
+        if (other.gameObject.name == "Player 1" && !player1Fin)
+        {
             player1Fin = true;
-            // Debug.Log("player1 in");
+            Debug.Log("player1 in");
         }
-        if (collision.gameObject.name == "Player 2" && !player2Fin){
+        if (other.gameObject.name == "Player 2" && !player2Fin)
+        {
             player2Fin = true;
-            // Debug.Log("player2 in");
+            Debug.Log("player2 in");
         }
-
-
     }
 
-    protected void OnCollisionExit(Collision collision)
+    protected void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.CompareTag("SportsGirl")){
+        if (other.gameObject.CompareTag("SportsGirl"))
+        {
             player1Fin = false;
         }
-        if (collision.gameObject.CompareTag("Librarian")){
+        if (other.gameObject.CompareTag("Librarian"))
+        {
             player2Fin = false;
         }
-
-
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        wintext.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,7 +48,15 @@ public class ExitLadderScript : MonoBehaviour
     {   
         if (player1Fin && player2Fin && !finished){
             finished=true;
+            wintext.SetActive(true);
+            StartCoroutine(Timer());
             Debug.Log("Finished!");
         }
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 }

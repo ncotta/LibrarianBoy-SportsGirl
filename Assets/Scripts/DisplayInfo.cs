@@ -13,28 +13,21 @@ public class DisplayInfo : MonoBehaviour
         instructions.gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("SportsGirl") || collision.gameObject.CompareTag("Librarian"))
+        if (other.gameObject.CompareTag("SportsGirl") || other.gameObject.CompareTag("Librarian"))
         {
-            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             instructions.gameObject.SetActive(true);
             displaying = true;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.CompareTag("SportsGirl") || collision.gameObject.CompareTag("Librarian"))
+        if (other.gameObject.CompareTag("SportsGirl") || other.gameObject.CompareTag("Librarian"))
         {
             instructions.gameObject.SetActive(false);
             displaying = false;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 }

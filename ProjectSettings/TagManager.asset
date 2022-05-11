@@ -17,7 +17,7 @@ TagManager:
   - RedZone
   - BlueZone
   - pushableBox
-  - DeathFloor
+  - Death
   layers:
   - Default
   - TransparentFX
