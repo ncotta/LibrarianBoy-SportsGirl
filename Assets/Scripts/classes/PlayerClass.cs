@@ -74,7 +74,8 @@ public class PlayerClass : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") 
         || collision.gameObject.CompareTag("Obstacle") 
-        || collision.gameObject.CompareTag("PressurePlate"))
+        || collision.gameObject.CompareTag("PressurePlate")
+        || collision.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
         }

@@ -143,6 +143,7 @@ public class Player1Controller : PlayerClass
                 Quaternion toRotation = Quaternion.LookRotation(r.normalized, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed);
                 if(isGrounded){
+                    Debug.Log("adding velo");
                     rb.velocity = r * 15f;
                 }
                 else{

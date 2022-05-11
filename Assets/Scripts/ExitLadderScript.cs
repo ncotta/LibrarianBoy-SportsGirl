@@ -15,12 +15,12 @@ public class ExitLadderScript : MonoBehaviour
         if (other.gameObject.name == "Player 1" && !player1Fin)
         {
             player1Fin = true;
-            Debug.Log("player1 in");
+            // Debug.Log("player1 in");
         }
         if (other.gameObject.name == "Player 2" && !player2Fin)
         {
             player2Fin = true;
-            Debug.Log("player2 in");
+            // Debug.Log("player2 in");
         }
     }
 

@@ -18,6 +18,7 @@ TagManager:
   - BlueZone
   - pushableBox
   - Death
+  - Box
   layers:
   - Default
   - TransparentFX
