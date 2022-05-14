@@ -13,7 +13,7 @@ void Update()
         distance = Mathf.Sqrt(Vector3.Dot(player1.transform.position-player2.transform.position, player1.transform.position-player2.transform.position));
         // Debug.Log(distance);
         transform.position = (player1.transform.position + player2.transform.position)/2
-         + new Vector3(15+distance/10, 25 + distance/2 , -15 - distance/10);
+         + new Vector3(15+distance/2, 25 + distance/2 , -15 - distance/2);
     }
 }
 /*

@@ -17,6 +17,8 @@ public class PlayerClass : MonoBehaviour
 
     public GameObject gameOverScreen;
     public GameObject gameDeathScreen;
+    public Camera ownCam;
+    public Camera otherCam;
 
     protected Rigidbody rb;
 
@@ -26,6 +28,7 @@ public class PlayerClass : MonoBehaviour
     public bool dead = false;
 
     protected bool interacting = false;
+    protected bool isActive;
     protected GameObject[] interactables;
     protected GameObject closest;
     protected float closestDist = 100f;
@@ -63,11 +66,7 @@ public class PlayerClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (transform.position.y < -20)
-        {
-            dead = true;
-            EndLevel();
-        }*/
+
     }
 
     protected void OnCollisionEnter(Collision collision)
@@ -114,6 +113,14 @@ public class PlayerClass : MonoBehaviour
                 Debug.Log("Interacting with lever");
                 closest.GetComponent<LeverScript>().Interact();
             }
+        }
+    }
+
+    public void SwitchActive(){
+        if (isActive){
+            isActive = false;
+        }else{
+            isActive = true;
         }
     }
 }
