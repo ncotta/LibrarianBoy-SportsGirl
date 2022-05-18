@@ -1,3 +1,9 @@
+/*
+* Author(s): Niklaas Cotta, Kelly Schombert
+* Last updated: 05/17/22
+* Controller for Player 1 game object
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +11,12 @@ using TMPro;
 
 public class Player2Controller : PlayerClass
 {
+    Animator m_Animator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        m_Animator = GetComponent<Animator>();
         pickupCount = 0;
         interactables = GameObject.FindGameObjectsWithTag("Interactable");
         isActive = false;
@@ -36,8 +44,12 @@ public class Player2Controller : PlayerClass
     void Update()
     {   
         if (isActive){
+            bool IsWalking = false;
+            m_Animator.SetBool("IsWalking", IsWalking);
+            
             if (Input.GetKey(KeyCode.W))
             {
+                m_Animator.SetBool("IsWalking", true);
 
                 stopMovementFriction = false;
                 if (r.x == -0.5f && r.z == -0.5f){
@@ -57,6 +69,7 @@ public class Player2Controller : PlayerClass
 
             if (Input.GetKey(KeyCode.S))
             {
+                m_Animator.SetBool("IsWalking", true);
 
                 stopMovementFriction = false;
 
@@ -77,6 +90,7 @@ public class Player2Controller : PlayerClass
 
             if (Input.GetKey(KeyCode.A))
             {
+                m_Animator.SetBool("IsWalking", true);
 
                 stopMovementFriction = false;
 
@@ -96,6 +110,7 @@ public class Player2Controller : PlayerClass
 
             if (Input.GetKey(KeyCode.D))
             {
+                m_Animator.SetBool("IsWalking", true);
 
                 stopMovementFriction = false;
 
@@ -118,6 +133,8 @@ public class Player2Controller : PlayerClass
 
             if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
+                m_Animator.SetTrigger("Jump");
+
                 rb.AddForce(Vector3.up * jumpThrust, ForceMode.Impulse);
                 isGrounded = false;
             }
