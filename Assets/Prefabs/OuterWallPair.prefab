@@ -39,6 +39,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6195197421497384824}
     m_Modifications:
+    - target: {fileID: 6228851603999384901, guid: 3d731a974332677449da6a9d98c02052, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228851603999384901, guid: 3d731a974332677449da6a9d98c02052, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.38
+      objectReference: {fileID: 0}
     - target: {fileID: 6232571873163805066, guid: 3d731a974332677449da6a9d98c02052, type: 3}
       propertyPath: m_Name
       value: OuterWallShelf
@@ -57,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6232571873163805067, guid: 3d731a974332677449da6a9d98c02052, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6232571873163805067, guid: 3d731a974332677449da6a9d98c02052, type: 3}
       propertyPath: m_LocalPosition.z
@@ -152,6 +160,14 @@ PrefabInstance:
     - target: {fileID: 3110809005727377349, guid: fce08bf9950e58e4092a3c13d24b7878, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110809005727377349, guid: fce08bf9950e58e4092a3c13d24b7878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110809005727377349, guid: fce08bf9950e58e4092a3c13d24b7878, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3113280921540798940, guid: fce08bf9950e58e4092a3c13d24b7878, type: 3}
       propertyPath: m_LocalScale.z

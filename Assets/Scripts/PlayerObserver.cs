@@ -21,7 +21,7 @@ public class PlayerObserver : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R) && !coolDown)
         {
-            Debug.Log("Pressed");
+            // Debug.Log("Pressed");
             coolDown = true;
 
             if (activeCam == 1){
