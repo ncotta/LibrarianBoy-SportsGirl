@@ -58,6 +58,6 @@ public class ExitLadderScript : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("Scenes/MainMenu");
+        SceneManager.LoadScene("Scenes/Level2");
     }
 }

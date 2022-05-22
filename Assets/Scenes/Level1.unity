@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -307,7 +307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2769322789764343971, guid: fce08bf9950e58e4092a3c13d24b7878, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32832718
+      value: -2.5243635
       objectReference: {fileID: 0}
     - target: {fileID: 2769322789764343971, guid: fce08bf9950e58e4092a3c13d24b7878, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1060,7 +1060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4325294
+      value: -4.28522
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1197,7 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32832718
+      value: -2.5243635
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1336,15 +1336,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420427251238568424, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.499999
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 420427251238568424, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 420427251238568424, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 7.065
       objectReference: {fileID: 0}
     - target: {fileID: 420427251238568424, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1719,7 +1719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3903026793743030200, guid: e723bac90d8802b4d86415a5b2fe9576, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 149.31
+      value: 146.4573
       objectReference: {fileID: 0}
     - target: {fileID: 3903026793743030200, guid: e723bac90d8802b4d86415a5b2fe9576, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2711,7 +2711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4625292
+      value: -4.31522
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3932,7 +3932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608334791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.73, y: 5.27, z: 71.03999}
+  m_LocalPosition: {x: 6.73, y: 2.4173093, z: 71.03999}
   m_LocalScale: {x: 50, y: 10.401508, z: 30}
   m_Children: []
   m_Father: {fileID: 1304829846}
@@ -4798,7 +4798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4625292
+      value: -4.31522
       objectReference: {fileID: 0}
     - target: {fileID: 6195197421497384824, guid: b2c709425f6779d418e54ac0f28275bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4867,7 +4867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4735406788704148, guid: c29247dca0ff635428024f53a7c95f59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2789145
+      value: 3.4262238
       objectReference: {fileID: 0}
     - target: {fileID: 4735406788704148, guid: c29247dca0ff635428024f53a7c95f59, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6195,7 +6195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2345439961594917710, guid: 048c83f063161424599611e88da2222f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.79269
+      value: 14.94
       objectReference: {fileID: 0}
     - target: {fileID: 2345439961594917710, guid: 048c83f063161424599611e88da2222f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6600,7 +6600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069050750963926725, guid: 0244247a14e319547b9a9b1f92efd788, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3069050750963926725, guid: 0244247a14e319547b9a9b1f92efd788, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9422,7 +9422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6919922180843258368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.85, z: 0}
   m_LocalScale: {x: 3, y: 3.5, z: 4}
   m_Children:
   - {fileID: 6925941017151103600}
@@ -13738,7 +13738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8432854193185862984}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -1.3}
+  m_LocalPosition: {x: 0, y: -2.66, z: -1.3}
   m_LocalScale: {x: 1.5, y: 1.29, z: 0.1}
   m_Children: []
   m_Father: {fileID: 8431685183876123532}
@@ -13950,7 +13950,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8237468712245846564, guid: dbc0f9b633f0b4d41816fe9c23198a2f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8237468712245846564, guid: dbc0f9b633f0b4d41816fe9c23198a2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14060,6 +14060,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9123235512453181836, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235512522524905, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_text
+      value: Use the interact key (E key) when at a lever to use it! Levers can open
+        doors!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235512550304452, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_text
+      value: Get both characters to the stairs at the end of the level to complete
+        it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235512675099194, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235512803128405, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235513031273918, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235513190297923, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_text
+      value: 'Player Controls: WASD to move Space to jump          E to interact             
+        R to swap characters'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235513366488985, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235513406551710, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123235513937035489, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9123235513949251952, guid: 52ded5e6075f70145bbe339807ccdff8, type: 3}
       propertyPath: m_Name
       value: Canvas
