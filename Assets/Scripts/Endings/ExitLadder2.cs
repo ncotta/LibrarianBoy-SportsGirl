@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitLadderScript : MonoBehaviour
+public class ExitLadder2 : MonoBehaviour
 {
     public bool player1Fin = false;
     public bool player2Fin = false;
@@ -11,14 +11,14 @@ public class ExitLadderScript : MonoBehaviour
     public GameObject wintext;
 
     protected void OnTriggerEnter(Collider other)
-    {   
+    {
         Debug.Log("collided");
-        if (other.gameObject.name == "Player 1" && !player1Fin)
+        if (other.gameObject.CompareTag("SportsGirl") && !player1Fin)
         {
             player1Fin = true;
             Debug.Log("player1 in");
         }
-        if (other.gameObject.name == "Player 2" && !player2Fin)
+        if (other.gameObject.CompareTag("Librarian") && !player2Fin)
         {
             player2Fin = true;
             Debug.Log("player2 in");
@@ -46,9 +46,10 @@ public class ExitLadderScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        if (player1Fin && player2Fin && !finished){
-            finished=true;
+    {
+        if (player1Fin && player2Fin && !finished)
+        {
+            finished = true;
             wintext.SetActive(true);
             StartCoroutine(Timer());
             Debug.Log("Finished!");
@@ -58,6 +59,6 @@ public class ExitLadderScript : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("Scenes/Level2");
+        SceneManager.LoadScene("Scenes/Level3");
     }
 }
