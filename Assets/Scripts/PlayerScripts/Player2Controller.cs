@@ -1,7 +1,7 @@
 /*
 * Author(s): Niklaas Cotta, Kelly Schombert
 * Last updated: 05/17/22
-* Controller for Player 1 game object
+* Controller for Player 2 game object
 */
 
 using System.Collections;
