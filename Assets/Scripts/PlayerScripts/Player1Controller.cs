@@ -12,11 +12,13 @@ using TMPro;
 public class Player1Controller : PlayerClass
 {
     Animator m_Animator;
+    AudioSource m_AudioSource;
     
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         m_Animator = GetComponent<Animator>();
+        m_AudioSource = GetComponent<AudioSource>();
         pickupCount = 0;
         interactables = GameObject.FindGameObjectsWithTag("Interactable");
         isActive = true;
@@ -50,6 +52,7 @@ public class Player1Controller : PlayerClass
             if (Input.GetKey(KeyCode.W))
             {
                 m_Animator.SetBool("IsWalking", true);
+                IsWalking = true;
 
                 stopMovementFriction = false;
                 if (r.x == -0.5f && r.z == -0.5f){
@@ -70,6 +73,7 @@ public class Player1Controller : PlayerClass
             if (Input.GetKey(KeyCode.S))
             {
                 m_Animator.SetBool("IsWalking", true);
+                IsWalking = true;
 
                 stopMovementFriction = false;
 
@@ -91,6 +95,7 @@ public class Player1Controller : PlayerClass
             if (Input.GetKey(KeyCode.A))
             {
                 m_Animator.SetBool("IsWalking", true);
+                IsWalking = true;
 
                 stopMovementFriction = false;
 
@@ -111,6 +116,7 @@ public class Player1Controller : PlayerClass
             if (Input.GetKey(KeyCode.D))
             {
                 m_Animator.SetBool("IsWalking", true);
+                IsWalking = true;
 
                 stopMovementFriction = false;
 
@@ -128,7 +134,16 @@ public class Player1Controller : PlayerClass
                 }
             }
 
-
+            if(IsWalking && isGrounded)
+            {
+                if(!m_AudioSource.isPlaying)
+                {
+                    m_AudioSource.Play();
+                }
+            } else
+            {
+                m_AudioSource.Stop();
+            }
 
 
             if (Input.GetKey(KeyCode.Space) && isGrounded)
