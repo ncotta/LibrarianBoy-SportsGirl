@@ -14,6 +14,10 @@ public class PressurePlateScript : MonoBehaviour
     void Start()
     {
         connectedElement = GameObject.Find(connectedElementName);
+        if (connectedElement.tag == "Light")
+        {
+            connectedElement.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -35,6 +39,10 @@ public class PressurePlateScript : MonoBehaviour
             if (connectedElement.tag == "Door"){
                 connectedElement.GetComponent<DoorScript>().Interact();
             }
+            else if (connectedElement.tag == "Light")
+            {
+                connectedElement.SetActive(true);
+            }
 
         }
     }
@@ -53,7 +61,10 @@ public class PressurePlateScript : MonoBehaviour
             if (connectedElement.tag == "Door"){
                 connectedElement.GetComponent<DoorScript>().Interact();
             }
-
+            else if (connectedElement.tag == "Light")
+            {
+                connectedElement.SetActive(false);
+            }
         }
     }
 

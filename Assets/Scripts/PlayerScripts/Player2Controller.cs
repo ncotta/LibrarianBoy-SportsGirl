@@ -26,12 +26,6 @@ public class Player2Controller : PlayerClass
 
     protected void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("BluePickup"))
-        {
-            other.gameObject.SetActive(false);
-            pickupCount++;
-        }
-
         if (other.gameObject.CompareTag("Ending"))
         {
             EndLevel();

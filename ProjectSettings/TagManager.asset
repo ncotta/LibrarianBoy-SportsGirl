@@ -11,14 +11,13 @@ TagManager:
   - Door
   - Ending
   - PressurePlate
-  - RedPickup
-  - BluePickup
   - Obstacle
   - RedZone
   - BlueZone
   - pushableBox
   - Death
   - Box
+  - Light
   layers:
   - Default
   - TransparentFX

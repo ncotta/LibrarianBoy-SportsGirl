@@ -26,11 +26,6 @@ public class Player1Controller : PlayerClass
 
     protected void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("RedPickup"))
-        {
-            other.gameObject.SetActive(false);
-            pickupCount++;
-        }
 
         if (other.gameObject.CompareTag("Ending"))
         {

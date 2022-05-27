@@ -54,13 +54,19 @@ public class PlayerClass : MonoBehaviour
     protected void EndLevel2()
     {
         gameDeathScreen.SetActive(true);
-        StartCoroutine(QuitGame());
+        StartCoroutine(QuitGame2());
     }
 
     IEnumerator QuitGame()
     {
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Scenes/MainMenu");
+    }
+
+    IEnumerator QuitGame2()
+    {
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Update is called once per frame
