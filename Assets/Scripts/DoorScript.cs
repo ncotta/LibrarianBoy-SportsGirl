@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-[Tooltip("If it is false door can't be used")]
+    AudioSource DoorOpening;
+    
+    [Tooltip("If it is false door can't be used")]
     public bool Locked = false;
     [Tooltip("It is true for remote control only")]
     public bool Remote = false;
@@ -46,6 +48,7 @@ public class DoorScript : MonoBehaviour
         // HeroInteractive = FindObjectOfType<AN_HeroInteractive>();
         librarian = GameObject.FindGameObjectWithTag("Librarian");
         sportsGirl = GameObject.FindGameObjectWithTag("SportsGirl");
+        DoorOpening = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -82,7 +85,7 @@ public class DoorScript : MonoBehaviour
             else if (!isOpened && CanOpen && !RedLocked && !BlueLocked)
             {
                 isOpened = true;
-                rbDoor.AddRelativeTorque(new Vector3(0, 0, 20f)); 
+                rbDoor.AddRelativeTorque(new Vector3(0, 0, 20f));
             }
         
         }
@@ -114,7 +117,14 @@ public class DoorScript : MonoBehaviour
                 hingeLim.min = -90f;
                 hinge.limits = hingeLim;
                 Debug.Log("opened");
-                rbDoor.AddRelativeTorque(new Vector3(200f, 200f, 200f)); 
+                rbDoor.AddRelativeTorque(new Vector3(200f, 200f, 200f));
+                if(!DoorOpening.isPlaying)
+                {
+                    DoorOpening.Play();
+                } else
+                {
+                    DoorOpening.Stop();
+                }
             }
     }
 

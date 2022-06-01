@@ -7,18 +7,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 
 public class Player1Controller : PlayerClass
 {
     Animator m_Animator;
     AudioSource m_AudioSource;
+    //public AudioSource Footsteps;
     
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         m_Animator = GetComponent<Animator>();
         m_AudioSource = GetComponent<AudioSource>();
+        //Footsteps = gameObject.AddComponent<AudioSource>();
+        //Footsteps.clip = Assets/Sound/Player1_Steps.wav;
         pickupCount = 0;
         interactables = GameObject.FindGameObjectsWithTag("Interactable");
         isActive = true;
@@ -135,9 +139,14 @@ public class Player1Controller : PlayerClass
                 {
                     m_AudioSource.Play();
                 }
+                //if(!Footsteps.isPlaying)
+                //{
+                //    Footsteps.Play();
+                //}
             } else
             {
                 m_AudioSource.Stop();
+                //Footsteps.Play();
             }
 
 

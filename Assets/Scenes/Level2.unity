@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4048,7 +4048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 16.356113
+      value: 16.356115
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.z
@@ -5568,15 +5568,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 4.140678
+      value: -27.006355
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 16.766
+      value: 16.356112
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 25.658354
+      value: -3.8206787
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
@@ -7258,15 +7258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 4.140678
+      value: 24.133865
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 16.766
+      value: 17.146002
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 25.658354
+      value: 83.079315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
@@ -10504,7 +10504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -27.436138
+      value: -27.436136
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -21387,7 +21387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 4.140678
+      value: 4.1406784
       objectReference: {fileID: 0}
     - target: {fileID: 6211039738035575057, guid: c8b94686fa9fe4e47bb99096d1d10171, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -21769,6 +21769,7 @@ GameObject:
   - component: {fileID: 6211039736744400108}
   - component: {fileID: 6211039736744400106}
   - component: {fileID: 3303788620236825186}
+  - component: {fileID: 5803818434881766294}
   m_Layer: 0
   m_Name: Door 7
   m_TagString: Door
@@ -21776,6 +21777,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &5803818434881766294
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803818434881766293}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4540699b5404b47ab80a40cf44ac722c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &5866090194095823705
 PrefabInstance:
   m_ObjectHideFlags: 0

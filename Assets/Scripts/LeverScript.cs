@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LeverScript : MonoBehaviour
 {
-[Tooltip("True for rotation like valve (used for ramp/elevator only)")]
+    AudioSource LeverFlip;
+
+    [Tooltip("True for rotation like valve (used for ramp/elevator only)")]
     public bool isValve = false;
     [Tooltip("SelfRotation speed of valve")]
     public float ValveSpeed = 10f;
@@ -52,6 +54,7 @@ public class LeverScript : MonoBehaviour
         // rampQuat = RampObject.rotation;
         connectedElement = GameObject.Find(connectedElementName);
         anim.SetBool("LeverUp", false);
+        LeverFlip = GetComponent<AudioSource>();
     }
 
     public void Interact(){
@@ -62,6 +65,13 @@ public class LeverScript : MonoBehaviour
             connectedElement.GetComponent<DoorScript>().Interact();
             isOpened = true;
             anim.SetBool("LeverUp", true);
+            if(!LeverFlip.isPlaying)
+            {
+                LeverFlip.Play();
+            } else
+            {
+                LeverFlip.Stop();
+            }
         }
        
     }
