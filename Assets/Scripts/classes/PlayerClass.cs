@@ -19,6 +19,10 @@ public class PlayerClass : MonoBehaviour
     public GameObject gameDeathScreen;
     public Camera ownCam;
     public Camera otherCam;
+    
+    public AudioSource FailureAudio;
+    public bool m_HasAudioPlayed;
+    public AudioSource BoxPush;
 
     protected Rigidbody rb;
 
@@ -47,12 +51,24 @@ public class PlayerClass : MonoBehaviour
     }
     protected void EndLevel()
     {
+        if(!m_HasAudioPlayed)
+        {
+            FailureAudio.Play();
+            m_HasAudioPlayed = true;
+        }
+        
         gameOverScreen.SetActive(true);
         StartCoroutine(QuitGame());
     }
 
     protected void EndLevel2()
     {
+        if(!m_HasAudioPlayed)
+        {
+            FailureAudio.Play();
+            m_HasAudioPlayed = true;
+        }
+        
         gameDeathScreen.SetActive(true);
         StartCoroutine(QuitGame2());
     }
@@ -84,6 +100,19 @@ public class PlayerClass : MonoBehaviour
         {
             isGrounded = true;
         }
+        
+        if(collision.gameObject.CompareTag("Box"))
+        {
+            if(!BoxPush.isPlaying)
+            {
+                BoxPush.Play();
+            } else
+            {
+                BoxPush.Stop();
+            }
+        }
+        
+        
 
     }
 
