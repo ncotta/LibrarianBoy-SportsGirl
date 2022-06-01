@@ -1466,6 +1466,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 5357046736916476881, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
+      propertyPath: rbBox
+      value: 
+      objectReference: {fileID: 1071930072}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
 --- !u!4 &432087293 stripped
@@ -3154,6 +3158,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1513690772799081788, guid: ac82eb7d70364bd4caea63b761fc4632, type: 3}
   m_PrefabInstance: {fileID: 184478353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1071930072 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 420427251238568425, guid: 5a1c69b2c8023a84183777f1dc50ccc8, type: 3}
+  m_PrefabInstance: {fileID: 386250697}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1082719412
 PrefabInstance:

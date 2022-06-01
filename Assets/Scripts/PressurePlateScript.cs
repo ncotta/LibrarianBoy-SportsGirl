@@ -10,6 +10,8 @@ public class PressurePlateScript : MonoBehaviour
 
     public string connectedElementName;
     GameObject connectedElement;
+    
+    AudioSource PressurePlate;
 
     void Start()
     {
@@ -18,6 +20,7 @@ public class PressurePlateScript : MonoBehaviour
         {
             connectedElement.SetActive(false);
         }
+        PressurePlate = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,14 @@ public class PressurePlateScript : MonoBehaviour
             // StartCoroutine(DelayDown());
             transform.position = new Vector3(transform.position.x, transform.position.y-0.4f, transform.position.z);
             other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y-0.4f, other.gameObject.transform.position.z);
+            
+            if(!PressurePlate.isPlaying)
+            {
+                PressurePlate.Play();
+            } else
+            {
+                PressurePlate.Stop();
+            }
 
             if (connectedElement.tag == "Door"){
                 connectedElement.GetComponent<DoorScript>().Interact();
@@ -57,6 +68,14 @@ public class PressurePlateScript : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y+0.4f, transform.position.z);
             other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y+0.4f, other.gameObject.transform.position.z);
             Debug.Log("Left");
+            
+            if(!PressurePlate.isPlaying)
+            {
+                PressurePlate.Play();
+            } else
+            {
+                PressurePlate.Stop();
+            }
 
             if (connectedElement.tag == "Door"){
                 connectedElement.GetComponent<DoorScript>().Interact();
