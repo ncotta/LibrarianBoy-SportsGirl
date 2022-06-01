@@ -26,9 +26,6 @@ public class PlayerClass : MonoBehaviour
 
     protected Rigidbody rb;
 
-    public bool redKey = false;
-    public bool blueKey = false;
-    public bool greenKey = false;
     public bool dead = false;
 
     protected bool interacting = false;
@@ -36,8 +33,7 @@ public class PlayerClass : MonoBehaviour
     protected GameObject[] interactables;
     protected GameObject closest;
     protected float closestDist = 100f;
-    string objectName;
-    // Start is called before the first frame update
+
 
     public PlayerClass(){
 
