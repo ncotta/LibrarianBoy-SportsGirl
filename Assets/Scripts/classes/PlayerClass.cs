@@ -44,6 +44,7 @@ public class PlayerClass : MonoBehaviour
     {
         gameOverScreen.SetActive(false);
         gameDeathScreen.SetActive(false);
+        m_HasAudioPlayed = false;
     }
     protected void EndLevel()
     {
@@ -102,9 +103,6 @@ public class PlayerClass : MonoBehaviour
             if(!BoxPush.isPlaying)
             {
                 BoxPush.Play();
-            } else
-            {
-                BoxPush.Stop();
             }
         }
         
